@@ -4,8 +4,95 @@
 #
 CONFIG_MODULES=y
 CONFIG_HAVE_DOT_CONFIG=y
+# CONFIG_TARGET_c200s_F1C200s is not set
+# CONFIG_TARGET_c600_cuckoo is not set
+# CONFIG_TARGET_g102_perf1 is not set
+# CONFIG_TARGET_g102_pro is not set
+# CONFIG_TARGET_h3_p1 is not set
+# CONFIG_TARGET_h6_p1 is not set
+# CONFIG_TARGET_mr112_robots is not set
+# CONFIG_TARGET_mr115_robots is not set
+# CONFIG_TARGET_mr133_perf1 is not set
+# CONFIG_TARGET_mr133_robots is not set
+# CONFIG_TARGET_r11_GW is not set
+# CONFIG_TARGET_r11_R11_pref1 is not set
+# CONFIG_TARGET_r11_R11_sc3866r is not set
+# CONFIG_TARGET_r11_dh is not set
+# CONFIG_TARGET_r11_kudrone is not set
+# CONFIG_TARGET_r11_mic is not set
+# CONFIG_TARGET_r11_perf1 is not set
+# CONFIG_TARGET_r16_dm is not set
+# CONFIG_TARGET_r16_dm2 is not set
+# CONFIG_TARGET_r16_evb is not set
+# CONFIG_TARGET_r16_noma is not set
+# CONFIG_TARGET_r16_parrot is not set
+# CONFIG_TARGET_r16_spk is not set
+# CONFIG_TARGET_r18_d1 is not set
+# CONFIG_TARGET_r18_d1nor is not set
+# CONFIG_TARGET_r18_hena is not set
+# CONFIG_TARGET_r18_m64 is not set
+# CONFIG_TARGET_r18_mozart is not set
+# CONFIG_TARGET_r18_noma is not set
+# CONFIG_TARGET_r18_pine64 is not set
+# CONFIG_TARGET_r18_sgw is not set
+# CONFIG_TARGET_r30_carp is not set
+# CONFIG_TARGET_r30_perf1 is not set
+# CONFIG_TARGET_r30_perf2 is not set
+# CONFIG_TARGET_r30_std is not set
+# CONFIG_TARGET_r311_perf1 is not set
+# CONFIG_TARGET_r328s2_demo is not set
+# CONFIG_TARGET_r328s2_demo_ui is not set
+# CONFIG_TARGET_r328s2_perf1 is not set
+# CONFIG_TARGET_r328s2_perf2_xr829 is not set
+# CONFIG_TARGET_r328s2_qa is not set
+# CONFIG_TARGET_r328s2_std is not set
+# CONFIG_TARGET_r328s2_ubidemo is not set
+# CONFIG_TARGET_r328s3_std is not set
+# CONFIG_TARGET_r328s3_std_xr829 is not set
+# CONFIG_TARGET_r331_ac100 is not set
+# CONFIG_TARGET_r331_ac101s is not set
+# CONFIG_TARGET_r331_std is not set
+# CONFIG_TARGET_r332_ac100 is not set
+# CONFIG_TARGET_r333_perf1 is not set
+# CONFIG_TARGET_r333_std is not set
+# CONFIG_TARGET_r40_evb is not set
+# CONFIG_TARGET_r40_m2ultra is not set
+# CONFIG_TARGET_r40_m2ultraservers is not set
+# CONFIG_TARGET_r40_perf1 is not set
+# CONFIG_TARGET_r40_perf2 is not set
+# CONFIG_TARGET_r40_perf3 is not set
+# CONFIG_TARGET_r58_dev is not set
+# CONFIG_TARGET_r58_sch is not set
+# CONFIG_TARGET_r6_db is not set
+# CONFIG_TARGET_r6_evb is not set
+# CONFIG_TARGET_r6_mic is not set
+# CONFIG_TARGET_r6_mic2 is not set
+# CONFIG_TARGET_r6_pd4 is not set
+# CONFIG_TARGET_r6_perf1 is not set
+# CONFIG_TARGET_r6_perf2 is not set
+# CONFIG_TARGET_r6_perf3 is not set
+# CONFIG_TARGET_r7_R7_pref1 is not set
+# CONFIG_TARGET_r7s_R7s is not set
+# CONFIG_TARGET_t7_chimera is not set
+# CONFIG_TARGET_t7_p1 is not set
+# CONFIG_TARGET_t7_perf1 is not set
+# CONFIG_TARGET_v133_scan is not set
+# CONFIG_TARGET_v163_sdv is not set
+# CONFIG_TARGET_v306_h300 is not set
+# CONFIG_TARGET_v313_sdv is not set
+# CONFIG_TARGET_v316_SdvDragonBoard is not set
+# CONFIG_TARGET_v316_perfnor is not set
+# CONFIG_TARGET_v316_sdv is not set
+# CONFIG_TARGET_v316_sdvlpddr is not set
+# CONFIG_TARGET_v459_perf1 is not set
+# CONFIG_TARGET_v459_pro_ipc is not set
+# CONFIG_TARGET_v459_qaqc is not set
+# CONFIG_TARGET_v5_dvb is not set
+# CONFIG_TARGET_v5_lindeni is not set
+# CONFIG_TARGET_v533_cdr is not set
+# CONFIG_TARGET_v536_CdrDragonboard is not set
 CONFIG_TARGET_v536_Lindenis_SBC=y
-# CONFIG_TARGET_v536_Lindenis_SOM is not set
+# CONFIG_TARGET_v536_cdr is not set
 CONFIG_TARGET_v536_Lindenis_SBC_=y
 CONFIG_TARGET_BOARD="v536-Lindenis_SBC"
 CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -march=armv7-a -mtune=cortex-a7 -mfpu=neon"
@@ -37,7 +124,14 @@ CONFIG_ARCH="arm"
 #
 # Target Images
 #
-# CONFIG_TARGET_ROOTFS_INITRAMFS is not set
+CONFIG_TARGET_ROOTFS_INITRAMFS=y
+# CONFIG_TARGET_INITRAMFS_COMPRESSION_NONE is not set
+# CONFIG_TARGET_INITRAMFS_COMPRESSION_GZIP is not set
+# CONFIG_TARGET_INITRAMFS_COMPRESSION_BZIP2 is not set
+# CONFIG_TARGET_INITRAMFS_COMPRESSION_LZMA is not set
+# CONFIG_TARGET_INITRAMFS_COMPRESSION_LZO is not set
+# CONFIG_TARGET_INITRAMFS_COMPRESSION_LZ4 is not set
+CONFIG_TARGET_INITRAMFS_COMPRESSION_XZ=y
 CONFIG_EXTERNAL_CPIO=""
 
 #
@@ -75,9 +169,15 @@ CONFIG_SUNXI_RECOVERY_INITRAMFS_KERNEL_FORMAT_UIMAGE=y
 # CONFIG_SUNXI_RECOVERY_INITRAMFS_KERNEL_FORMAT_BOOTIMG is not set
 # CONFIG_SUNXI_SEPARATE_APP_FROM_ROOTFS is not set
 # CONFIG_SUNXI_SEPARATE_DATA_FROM_ROOTFS is not set
-# CONFIG_CUSTOMIZE_IMAGE_NAME is not set
+CONFIG_CUSTOMIZE_IMAGE_NAME=y
+CONFIG_SUNXI_BOOT_IMAGE_NAME_SUFFIX_NONE=y
+# CONFIG_SUNXI_BOOT_IMAGE_NAME_SUFFIX_RECOVERY is not set
+# CONFIG_SUNXI_BOOT_IMAGE_NAME_SUFFIX_RAMFS is not set
+CONFIG_SUNXI_ROOTFS_IMAGE_NAME_SUFFIX_NONE=y
+# CONFIG_SUNXI_ROOTFS_IMAGE_NAME_SUFFIX_RECOVERY is not set
+# CONFIG_SUNXI_ROOTFS_IMAGE_NAME_SUFFIX_RAMFS is not set
 # CONFIG_CUSTOMIZE_CONFIG_FILE is not set
-CONFIG_TARGET_ROOTFS_PARTSIZE=512
+CONFIG_TARGET_ROOTFS_PARTSIZE=100
 # CONFIG_TARGET_ROOTFS_INCLUDE_KERNEL is not set
 CONFIG_TARGET_ROOTFS_INCLUDE_UIMAGE=y
 CONFIG_TARGET_ROOTFS_INCLUDE_ZIMAGE=y
@@ -2257,14 +2357,12 @@ CONFIG_LIBSTDCPP_FILE_SPEC="./lib/libstdc++.so.*"
 # CONFIG_PACKAGE_eyesee-mpp-V316SdvDragonBoard is not set
 # CONFIG_PACKAGE_eyesee-mpp-V536CdrDragonboard is not set
 # CONFIG_PACKAGE_eyesee-mpp-V5SdvLindeni is not set
-CONFIG_PACKAGE_eyesee-mpp-awcdr=y
-CONFIG_hdmi_1080p=y
-# CONFIG_lcd_720p is not set
+# CONFIG_PACKAGE_eyesee-mpp-awcdr is not set
 # CONFIG_PACKAGE_eyesee-mpp-cloud is not set
 # CONFIG_PACKAGE_eyesee-mpp-custom_aw is not set
 CONFIG_PACKAGE_eyesee-mpp-external=y
 # CONFIG_mpp_external_uvoice is not set
-CONFIG_mpp_external_jsoncpp=y
+# CONFIG_mpp_external_jsoncpp is not set
 CONFIG_PACKAGE_eyesee-mpp-framework=y
 # CONFIG_mpp_framework_videoresizer is not set
 CONFIG_PACKAGE_eyesee-mpp-middleware=y
@@ -2288,11 +2386,11 @@ CONFIG_mpp_muxer=y
 CONFIG_mpp_demuxer=y
 # CONFIG_mpp_ise is not set
 # CONFIG_mpp_eis is not set
-CONFIG_mpp_motion_detect_soft=y
+# CONFIG_mpp_motion_detect_soft is not set
 # CONFIG_mpp_aec is not set
 # CONFIG_mpp_uvc is not set
 CONFIG_mpp_compile_static_lib=y
-CONFIG_mpp_compile_dynamic_lib=y
+# CONFIG_mpp_compile_dynamic_lib is not set
 # CONFIG_mpp_systrace is not set
 CONFIG_PACKAGE_eyesee-mpp-system=y
 # CONFIG_wifi_8189ftv is not set
@@ -2333,9 +2431,7 @@ CONFIG_PACKAGE_adb=y
 # CONFIG_PACKAGE_benchmarks is not set
 # CONFIG_PACKAGE_boot-play is not set
 # CONFIG_PACKAGE_camerademo is not set
-CONFIG_PACKAGE_eyesee-minigui=y
-CONFIG_SUNXITSLIB_SUPPORT=y
-# CONFIG_AWMINIGUI_TSLIB_SUPPORT is not set
+# CONFIG_PACKAGE_eyesee-minigui is not set
 # CONFIG_PACKAGE_healthd is not set
 # CONFIG_PACKAGE_libAWIspApi is not set
 # CONFIG_PACKAGE_libaec-xt is not set
@@ -2363,7 +2459,7 @@ CONFIG_SUNXI_DISPLAY_DE=y
 # CONFIG_PACKAGE_libutils is not set
 # CONFIG_PACKAGE_logwrapper is not set
 # CONFIG_PACKAGE_mad-demo is not set
-# CONFIG_PACKAGE_misc-upgrade is not set
+CONFIG_PACKAGE_misc-upgrade=y
 # CONFIG_PACKAGE_mtdbadblk is not set
 # CONFIG_PACKAGE_mtop is not set
 CONFIG_C_CODE=y
