@@ -17,7 +17,7 @@ fi
 cp -vrf $pwd/zoneinfo $1/usr/share/
 
 if ! grep -q "export TZ" $1/etc/profile; then
-    echo -e "\nexport TZ=\"Asia/Shanghai\"" >> $1/etc/profile
+    echo -e "\nexport TZ=\"America/Chicago\"" >> $1/etc/profile
 fi
 
 exit 0
